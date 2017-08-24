@@ -19,7 +19,7 @@ public class BubbleSortSequenceImpl implements NumberArraySort {
 	public int[] sortnumber(int[] randomNumber) {
 		for (int i = 0; i < randomNumber.length; i++) {
 			for (int j = i + 1; j < randomNumber.length; j++) {
-				if (randomNumber[j] > randomNumber[i]) {
+				if (randomNumber[j] < randomNumber[i]) {
 					int replaceNumber = randomNumber[i];
 					randomNumber[i] = randomNumber[j];
 					randomNumber[j] = replaceNumber;
@@ -35,9 +35,9 @@ public class BubbleSortSequenceImpl implements NumberArraySort {
 	public void printnumber(int[] numberArray) {
 		for (int i = 0; i < numberArray.length; i++) {
 			if (i == numberArray.length - 1) {
-			//	System.out.println(numberArray[i]);
+				System.out.println(numberArray[i]);
 			} else {
-			//	System.out.print(numberArray[i] + " ");
+				System.out.print(numberArray[i] + " ");
 			}
 
 		}

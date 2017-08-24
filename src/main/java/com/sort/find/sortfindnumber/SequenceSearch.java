@@ -26,9 +26,9 @@ public class SequenceSearch {
 	public void printarray(int[] numberArray) {
 		for (int i = 0; i < numberArray.length; i++) {
 			if (i == numberArray.length - 1) {
-		//		System.out.println(numberArray[i]);
+				System.out.println(numberArray[i]);
 			} else {
-		//		System.out.print(numberArray[i] + " ");
+				System.out.print(numberArray[i] + " ");
 			}
 
 		}
@@ -70,10 +70,10 @@ public class SequenceSearch {
 	 */
 	public static void main(String[] args) {
 		SequenceSearch search = new SequenceSearch();
-		int numberLength = 1000000;
+		int numberLength = 10;
 		int[] numberArray = search.numberarray(numberLength);
 		search.printarray(numberArray);
-		int findNumber = 674876;
+		int findNumber = 2;
 		long start = System.currentTimeMillis();
 		int returnNumber = search.sequencesearch(numberArray, findNumber);
 		long end = System.currentTimeMillis();

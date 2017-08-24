@@ -9,7 +9,7 @@ public class SelecttionSortBiSearchTest {
 	 */
 	public static void main(String[] args) {
 		NumberArraySort sort = new SelectionSortBiSearchImpl();
-		int numberLength = 3000000;
+		int numberLength = 10;
 		int[] randomNumber = sort.randomnumber(numberLength);
 		long end = System.currentTimeMillis();
 		int[] numberArray = sort.sortnumber(randomNumber);
@@ -17,7 +17,7 @@ public class SelecttionSortBiSearchTest {
 		long sortTime = start - end;
 		System.out.println(sortTime + "毫秒。“选择排序法”排序数字所花费的时间");
 		sort.printnumber(numberArray);
-		int findNumber = 2374876;
+		int findNumber = 2;
 		long end2 = System.currentTimeMillis();
 		int returnNumber = sort.bisearch(numberArray,findNumber);
 		long start2 = System.currentTimeMillis();

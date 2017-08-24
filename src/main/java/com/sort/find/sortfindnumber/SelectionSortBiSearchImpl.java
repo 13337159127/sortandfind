@@ -39,9 +39,9 @@ public class SelectionSortBiSearchImpl implements NumberArraySort {
 	public void printnumber(int[] numberArray) {
 		for (int i = 0; i < numberArray.length; i++) {
 			if (i == numberArray.length - 1) {
-		//		System.out.println(numberArray[i] + " ");
+				System.out.println(numberArray[i] + " ");
 			} else {
-		//		System.out.print(numberArray[i] + " ");
+				System.out.print(numberArray[i] + " ");
 			}
 		}
 	}

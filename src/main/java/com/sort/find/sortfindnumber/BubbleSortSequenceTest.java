@@ -8,7 +8,7 @@ public class BubbleSortSequenceTest {
 	 */
 	public static void main(String[] args) {
 		NumberArraySort sort = new BubbleSortSequenceImpl();
-		int numberLength = 200000;
+		int numberLength = 10;
 		int[] randomNumber = sort.randomnumber(numberLength);
 		long end = System.currentTimeMillis();
 		int[] numberArray = sort.sortnumber(randomNumber);
@@ -16,7 +16,7 @@ public class BubbleSortSequenceTest {
 		long sortTime = start - end;
 		System.out.println(sortTime + "毫秒。排序数字所花费的时间");
 		sort.printnumber(numberArray);
-		int findNumber = 174876;
+		int findNumber = 1;
 		long end2 = System.currentTimeMillis();
 		int returnNumber = sort.bisearch(numberArray,findNumber);
 		long start2 = System.currentTimeMillis();
