@@ -1,23 +1,29 @@
 package com.sort.find.insertsort;
 
-public class InsertSort2 {
+public class SelectSort {
 
 	/**
-	 * 用“冒泡排序法”把数组的值按照从大到小顺序排列
+	 * 用“选择排序法”给数组进行排序
 	 * 
 	 * @param numberArray
-	 *            传进来数组
-	 * @return 排序号的数组
+	 *            传进来的数组
+	 * @return
 	 */
 	public int[] numberarray(int[] numberArray) {
-		// 定义一个目标值
 		for (int i = 0; i < numberArray.length; i++) {
+			// 定义一个最小下标
+			int smallTab = i;
+			// 从数字中选取一个最小值
 			for (int j = i + 1; j < numberArray.length; j++) {
-				if (numberArray[i] > numberArray[j]) {
-					int replaceNumber = numberArray[i];
-					numberArray[i] = numberArray[j];
-					numberArray[j] = replaceNumber;
+				if (numberArray[smallTab] > numberArray[j]) {
+					smallTab = j;
 				}
+			}
+			// 最小值和顺序值交换位置
+			if (smallTab != i) {
+				int replaceNumber = numberArray[i];
+				numberArray[i] = numberArray[smallTab];
+				numberArray[smallTab] = replaceNumber;
 			}
 		}
 		return numberArray;
@@ -40,8 +46,8 @@ public class InsertSort2 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		InsertSort2 sort = new InsertSort2();
-		int[] numberArray = { 16, 4, 47, 11, 20 };
+		SelectSort sort = new SelectSort();
+		int[] numberArray = { 16, 11, 47, 4, 20 };
 		int[] sortNumber = sort.numberarray(numberArray);
 		sort.printNumber(sortNumber);
 	}

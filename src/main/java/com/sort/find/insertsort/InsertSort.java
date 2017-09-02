@@ -3,26 +3,25 @@ package com.sort.find.insertsort;
 public class InsertSort {
 
 	/**
-	 * 插入排序
+	 * 插入排序 一序列数字，从后向前比较，按照排序规则，如果符合排序规则，则 不用动，如果不符合排序规则， 则把大值向后移动，把基准值插入到该放到的位置
 	 * 
 	 * @param numberArray
 	 *            传进来的数组
 	 * @return
 	 */
 	public int[] numberarray(int[] numberArray) {
+		// 插入排序，从后向前查找
 		for (int i = 1; i < numberArray.length; i++) {
 			int j = i;
-			// 定义一个目标值
-			int treget = numberArray[i];
-			// 如果j大于0，并且treget值小于它前一位的值，则进入循环
-			while (j > 0 && treget < numberArray[j - 1]) {
-				// 把大的值向后移一位
+			// 定义一个基准值
+			int number = numberArray[i];
+			while (j > 0 && number < numberArray[j - 1]) {
+				// 把大值向后移动
 				numberArray[j] = numberArray[j - 1];
-				// 拿目标值与数组前面的值做比较
 				j--;
 			}
-			// 将treget插入到适当位置
-			numberArray[j] = treget;
+			//把基准值插入到合适的位置
+			numberArray[j] = number;
 		}
 		return numberArray;
 	}
@@ -45,7 +44,7 @@ public class InsertSort {
 	 */
 	public static void main(String[] args) {
 		InsertSort sort = new InsertSort();
-		int[] numberArray = { 15, 34, 47, 11, 20, 17, 23, 67, 56 };
+		int[] numberArray = { 15, 34, 47, 11, 20 };
 		int[] sortNumber = sort.numberarray(numberArray);
 		sort.printNumber(sortNumber);
 	}

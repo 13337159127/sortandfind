@@ -28,6 +28,7 @@ public class InsertSortBiSearchImpl implements NumberArraySort {
 				randomNumber[j] = randomNumber[j - 1];
 				j--;
 			}
+			randomNumber[j] = number;
 		}
 		return randomNumber;
 	}
