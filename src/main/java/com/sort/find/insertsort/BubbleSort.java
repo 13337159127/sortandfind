@@ -1,10 +1,13 @@
 package com.sort.find.insertsort;
 
+import java.util.Arrays;
+
 public class BubbleSort {
 
 	/**
 	 * 用“冒泡排序法”把数组的值按照从小到大顺序排列
-	 * 一序列数字，两个数字一一比较，如果符合排序规则，则不用动，如果不符合排序规则，则把两个数字互换位置，直到不能交换为止，则排序完成
+	 * 它重复的走访要排序的数列，一次比较两个元素，如果他们顺序错误就把他们交换过来，直到不需要再交换，
+	 * 也就是说该数列已经排序完成。
 	 * 
 	 * @param numberArray
 	 *            传进来数组
@@ -30,10 +33,9 @@ public class BubbleSort {
 	 * 
 	 * @param sortNumber
 	 */
-	public void printNumber(int[] sortNumber) {
-		for (int i = 0; i < sortNumber.length; i++) {
-			System.out.print(sortNumber[i] + "\t");
-		}
+	public void printNumber(int[] sortNumber) {	
+		//直接输出数组的值
+		System.out.print(Arrays.toString(sortNumber)); 
 	}
 
 	/**

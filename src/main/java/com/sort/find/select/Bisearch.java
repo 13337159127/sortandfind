@@ -40,7 +40,7 @@ public class Bisearch {
 	 */
 	public static void main(String[] args) {
 		Bisearch bisearch = new Bisearch();
-		int targentNumber = 5;		 
+		int targentNumber = 10;		 
 		int[] numberArray = {1,2,3,4,5,6,7,8,9};	 
 		long start = System.currentTimeMillis();
 		int postion = bisearch.getPositionNumber(numberArray, targentNumber);

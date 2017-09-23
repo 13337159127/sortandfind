@@ -4,7 +4,8 @@ public class SelectSort {
 
 	/**
 	 * 用“选择排序法”给数组进行排序
-	 * 
+	 * 每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置。
+	 * 起始位置的值和最大(小)值交换，直到全部待排序的数据元素排完。
 	 * @param numberArray
 	 *            传进来的数组
 	 * @return
@@ -19,7 +20,7 @@ public class SelectSort {
 					smallTab = j;
 				}
 			}
-			// 最小值和顺序值交换位置
+			// 最小值和基准值交换位置
 			if (smallTab != i) {
 				int replaceNumber = numberArray[i];
 				numberArray[i] = numberArray[smallTab];
